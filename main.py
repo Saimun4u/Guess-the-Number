@@ -1,4 +1,22 @@
 import random
+
+# *** SECOND SOLUTION ***
+
+def guess(x):
+    random_number = random.randint(1,x)
+    print(random_number)
+    guess = 0
+    while guess != random_number:
+        guess = int(input(f'Guess a number between 1 and {x}: '))
+        if guess < random_number:
+            print('Sorry, guess again. Guess is low')
+        elif guess > random_number:
+            print('Sorry, guess again. Guess is high') 
+    
+    print(f"Congratulations! You've guess the correct number {random_number}")
+
+guess(10)
+
 # num = random.randint(1,10)
 # print(num)
 
@@ -25,11 +43,5 @@ import random
 #            break
 
 # guess_number()
-
-# *** SECOND SOLUTION ***
-
-def guess(x):
-    random_number = random.randint(1,x)
-    guess = 0
 
 
