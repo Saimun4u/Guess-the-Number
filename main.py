@@ -4,7 +4,7 @@ import random
 
 def guess_number():
     num = random.randint(1,5)
-    guess = int(input('Guess the number: '))
+    guess = int(input('Guess the number the computer generated between 1 and 5: '))
     while True:
       if guess != num:
           print('Your guess is wrong🤣 Better luck next time')
