@@ -14,7 +14,7 @@ def guess(x):
     
     print(f"Congratulations! You've guess the number {random_number} correctly!!!")
 
-guess(10)
+# guess(10)
 
 # num = random.randint(1,10)
 # print(num)
@@ -43,4 +43,18 @@ guess(10)
 
 # guess_number()
 
+# ********** A NEW PROGRAM TO HAVE THE COMPUTER GUESS THE SECRET NUMBER *********
+
+def computer_guess(x):
+    low = 1
+    high = x
+    feedback = ''
+    while feedback != 'c':
+        guess =  random.randint(low,high)
+        feedback = input(f'Is {guess} too high (H), too low (L), or correct (C)?? ').lower()
+        if feedback == 'h':
+            high = guess - 1
+        elif feedback == 'l':
+            low = guess + 1
+            
 
